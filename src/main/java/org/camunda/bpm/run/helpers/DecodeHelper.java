@@ -25,7 +25,7 @@ public class DecodeHelper {
 			Object yamlObj = om.readValue(file, Object.class);
 			String jsonStr = jsonOm.writeValueAsString(yamlObj);
 			JSONObject jsonObj = new JSONObject(jsonStr);
-			JSONObject ldapJson = jsonObj.getJSONObject(yamlKey);
+			JSONObject ldapJson = jsonObj.getJSONObject("camunda.bpm").getJSONObject("run").getJSONObject(yamlKey);
 
 			return ldapJson;
 			

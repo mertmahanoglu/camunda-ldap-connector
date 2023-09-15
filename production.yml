@@ -34,32 +34,31 @@ camunda.bpm:
     # https://docs.camunda.org/manual/latest/user-guide/process-engine/identity-service/#configuration-properties-of-the-ldap-plugin
     # https://docs.camunda.org/manual/latest/user-guide/camunda-bpm-run/#ldap-identity-service
     # Uncomment this section to enable LDAP support for Camunda Run
-ldap:
-  enabled: true
-  server-url: ldap://ldap.forumsys.com:389
-  #administrator-group-name: mathematicians
-  accept-untrusted-certificates: false
-  manager-dn: uid=tesla,dc=example,dc=com
-  manager-password: d46308a408f22e72001b81e191eef0115168c33baf38a1d143093be5805d0465
-  base-dn: dc=example,dc=com
-  useSsl: false
-  user-search-base: ''
-  user-search-filter: (objectclass=inetOrgPerson)
-  user-id-attribute: uid
-  user-firstname-attribute: cn
-  user-lastname-attribute: sn
-  user-email-ttribute: mail
-  user-password-attribute: userpassword
-  group-search-base: 'ou=mathematicians'
-  group-search-filter: (objectclass=groupOfUniqueNames)
-  group-id-attribute: cn
-  group-name-attribute: cn
-  group-member-attribute: uniqueMember
-  sort-control-supported: false
-admin-auth:
-  enabled: true
-  administrator-user-name: cea6091d1ab2c8633f433d6622bba44ff7beaae6324499ad07f937a321851029
-  #administrator-group-name: Mathematicians
+    ldap:
+      server-url: ldap://ldap.forumsys.com:389
+      #administrator-group-name: mathematicians
+      accept-untrusted-certificates: false
+      manager-dn: uid=tesla,dc=example,dc=com
+      manager-password: d46308a408f22e72001b81e191eef0115168c33baf38a1d143093be5805d0465
+      base-dn: dc=example,dc=com
+      useSsl: false
+      user-search-base: ''
+      user-search-filter: (objectclass=inetOrgPerson)
+      user-id-attribute: uid
+      user-firstname-attribute: cn
+      user-lastname-attribute: sn
+      user-email-ttribute: mail
+      user-password-attribute: userpassword
+      group-search-base: 'ou=mathematicians'
+      group-search-filter: (objectclass=groupOfUniqueNames)
+      group-id-attribute: cn
+      group-name-attribute: cn
+      group-member-attribute: uniqueMember
+      sort-control-supported: false
+    admin-auth:
+      enabled: true
+      administrator-user-name: cea6091d1ab2c8633f433d6622bba44ff7beaae6324499ad07f937a321851029
+      #administrator-group-name: Mathematicians
 server:
   # https://docs.camunda.org/manual/latest/user-guide/camunda-bpm-run/#https
   # do not use the provided certificate in production
@@ -85,6 +84,7 @@ logging:
 
 process-engine-plugins:
   - plugin-class: org.camunda.bpm.run.plugins.LdapConnectorPlugin
+  - plugin-class: org.camunda.bpm.run.kurul.parselistener.ParseListenerPlugin
 
 # datasource configuration is required
 # do not use the H2 databse in production
