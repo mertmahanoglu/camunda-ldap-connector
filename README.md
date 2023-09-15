@@ -17,8 +17,11 @@ You can find these jars from here :
  https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.15.2
  https://mvnrepository.com/artifact/org.springframework.security/spring-security-crypto/6.1.3
 
-When jars are placed, we need to configure our LDAP info in production.yml.
-*!!!WARNING: We need to remove ldap.enabled parameter from production.yml or set to false. You can find example production.yml file in repo.*
+When jars are placed, we need to configure our LDAP info in production.yml. 
+
+*!!!WARNING: We need to remove ldap.enabled parameter from production.yml or set to false (like down below). You can find example production.yml file in repo.*
+![image](https://github.com/mertmahanoglu/camunda-ldap-connector/assets/72344057/038e880e-e4f9-4e2d-ae45-fbb17137c876)
+![image](https://github.com/mertmahanoglu/camunda-ldap-connector/assets/72344057/d2392fc9-6801-4f2e-a255-8c27e07d46fb)
 
 After configuring our ldap informations, we need to add our plugin to process-engine-plugins in production.yml file.
 ![image](https://github.com/mertmahanoglu/camunda-ldap-connector/assets/72344057/22f052c0-4624-44d8-8c0e-f9725e27955a)
