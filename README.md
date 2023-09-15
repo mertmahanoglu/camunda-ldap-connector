@@ -20,6 +20,7 @@ You can find these jars from here :
 When jars are placed, we need to configure our LDAP info in production.yml. 
 
 *!!!WARNING: We need to remove ldap.enabled parameter from production.yml or set to false (like down below). You can find example production.yml file in repo.*
+
 ![image](https://github.com/mertmahanoglu/camunda-ldap-connector/assets/72344057/038e880e-e4f9-4e2d-ae45-fbb17137c876)
 ![image](https://github.com/mertmahanoglu/camunda-ldap-connector/assets/72344057/d2392fc9-6801-4f2e-a255-8c27e07d46fb)
 
